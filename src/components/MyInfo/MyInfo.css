@@ -1,0 +1,200 @@
+.curtain{
+    position: absolute;
+    background: #0000004f;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+
+    z-index: 0;
+}
+.my-info-button{
+    position: fixed;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 50px;
+    height: 50px;
+
+    bottom: 1%;
+    right: 1%;
+
+    background: transparent;
+    border: 0px solid;
+
+    fill: aliceblue;
+    transition: 0.2s;
+}
+.my-info-button svg{
+    width: 32px;
+    height: 32px;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+.my-info-button:hover svg{
+    width: 42px;
+    height: 42px;
+}
+
+.my-info{
+    position: fixed;
+
+    bottom: 1%;
+    right: 1%;
+
+    transition: right 0.5s;
+
+    display: flex;
+    flex-direction: column;
+    
+    border: 1px solid #000;
+    border-radius: 0.7rem;
+
+    min-height: 250px;
+
+    width: 445px;
+
+    min-width: 250px;
+    max-width: 500px;
+
+    background: #fdfdfd;
+    overflow: hidden;
+    z-index: 100;
+}
+.my-info.hide{
+    bottom: 1%;
+    right: -445px;
+
+    transition: right 0.5s;
+}
+.my-info header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    border-radius: 0.7rem 0.7rem 0 0;
+    box-shadow: 0px 1px 1px 0px #00000046;
+
+    padding: 10px 25px;
+    font-size: 24px;
+    font-family:  system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    background: #fff;
+    font-weight: bold;
+}
+.profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 150px;
+
+}
+.profile img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0px 1px 4px 0px #00000046;
+}
+.profile-name{
+    font-weight: bold;
+    font-size: 24px;
+
+    margin-bottom: 5px;
+    margin-right: 8px;
+}
+.profile-profession{
+    font-weight: lighter;
+    font-size: 14px;
+
+    margin-right: 8px;
+    text-align: right;
+}
+.sities{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(90px,1fr));
+    align-items: center;
+
+    height: 170px;
+
+    padding: 10px 25px;
+}
+
+
+.site{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 90px;
+    
+
+    text-decoration: none;
+    color: #000;
+
+}
+.site-circle{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 100px;
+    min-height: 100px;
+
+    background: #fff;
+    box-shadow: 0px 1px 4px 0px #00000046;
+    border-radius: 50%;
+
+    overflow: hidden;
+    transition: 0.2s;
+}
+.site-circle svg{
+    
+    fill: #000;
+    color: #000;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    margin-bottom: 5px;
+    transition: 0.2s;
+}
+.site-name{
+    border: 0px solid #000;
+    border-radius: 2.8rem;
+
+    font-size: 14px;
+    padding: 0px 5px;
+    transition: 0.2s;
+}
+.site:hover .site-circle {
+    min-width: 110px;
+    min-height: 110px;
+}
+.site:hover .site-circle svg{
+    width: 60px;
+    height: 60px;
+}
+.site:hover .site-circle .site-name{
+    padding: 2px 7px;
+    font-size: 18px;
+}
+@keyframes Appear {
+    0%{
+        right: -25%;
+    }
+    100%{
+        right: 1%;
+    }
+}
